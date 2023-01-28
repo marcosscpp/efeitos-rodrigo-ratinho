@@ -18,16 +18,15 @@ body {
     min-height: 100vh;
 }
 
-.teclado {
-    width: 50%;
-}
 
 .teclado__ratinho {
     background: var(--branco);
+    width: 50%;
 }
 
 .teclado__rodrigofaro {
     background: var(--preto);
+    width: 50%;
 }
 
 h2 {
@@ -53,6 +52,7 @@ h2 {
     box-sizing: border-box;
     border-radius: 1.5rem;
     color: var(--verde-agua);
+    cursor: pointer;
     font-family: 'Secular One', sans-serif;
     font-size: 1.2rem;
     height: 9.5rem;
@@ -61,7 +61,7 @@ h2 {
 }
 
 .tecla:active {
-    box-shadow: none;
+   box-shadow: none;
    margin: 10px 0 0 7px;
 }
 
@@ -87,7 +87,7 @@ h2 {
         flex-direction: column;
     }
 
-    .teclado {
+    .teclado__ratinho, .teclado__rodrigofaro {
         width: 100%;
     }
 
