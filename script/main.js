@@ -1,5 +1,5 @@
 function tocaSom(elementoSom) {
-    const somSelecionado = document.querySelector(elementoSom);
+    const somSelecionado = document.getElementById(elementoSom);
     
     if(somSelecionado === null || somSelecionado.localName != "audio") {
         alert("Áudio não encontrado!");
@@ -14,10 +14,11 @@ const listaTeclas = document.querySelectorAll('.tecla');
 
 for(let i = 0; i < listaTeclas.length; i++) {
     const tecla = listaTeclas[i];
-    const nomeSom = tecla.classList[1].slice(6); // Extrai nome da classe com som desejado
-    const idSom = "#som_" + nomeSom;
+    const nomeSom = tecla.classList[1].slice(5); // Extrai nome da classe com som desejado
+    const idSom = "som" + nomeSom; 
 
-    tecla.onclick = function () {
+    // Adiciona cada som em um botão respectivo
+    tecla.addEventListener("click", function () {
         tocaSom(idSom);
-    }
+    })
 }
